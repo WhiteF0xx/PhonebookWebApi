@@ -1,0 +1,45 @@
+<div class="container m-5mx-auto" style="display: block;">
+  <div class="container TransparentBox m-3 border border-primary rounded mx-auto" style="display: inline-block;">
+    <div class="row m-3 mx-auto"
+      style="background-color: rgb(209, 206, 206);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <div class="col-sm-12">
+        <h1 class="text-center" style="color: red;font-weight: bolder;">Add Contact</h1>
+      </div>
+    </div>
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+      <!-- Text input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="name">First name</label>
+        <input type="text" id="name" formControlName="name"  class="form-control"  required/>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="name">Last name</label>
+        <input type="text" id="name" formControlName="surname" class="form-control" required/> 
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="email">Email</label>
+        <input type="text" id="email" formControlName="email" class="form-control"/>      
+      </div>
+
+      <!-- Number input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="phoneNumber1">Phone Number 1</label>
+        <input type="number" id="phoneNumber1" formControlName="phoneNumber1" class="form-control" required/>  
+      </div>
+
+      <!-- Number input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="phoneNumber2">Phone Number 2</label>
+        <input type="number" id="phoneNumber2" formControlName="phoneNumber2" class="form-control" />        
+      </div>
+
+      
+      <!-- Submit button -->
+      <button type="submit" [disabled]="dataForm.invalid" class="btn btn-primary btn-block mb-4">Sumbit Contact</button>
+    </form>
+  </div>
+</div>

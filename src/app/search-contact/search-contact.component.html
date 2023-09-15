@@ -1,0 +1,54 @@
+<div class="container m-5mx-auto" style="display: block;">
+    <div class="container TransparentBox m-3 border border-primary rounded mx-auto" style="display: inline-block;">
+        <div class="row m-3 mx-auto"
+            style="background-color: rgb(209, 206, 206);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="col-sm-12">
+                <h1 class="text-center" style="color: red;font-weight: bolder;">Add Contact</h1>
+            </div>
+        </div>
+        <form #searchForm="ngForm">
+            <!-- Text input -->
+            <div class="row mb-4">
+                <div class="col-6">
+                    <div class="form-outline">
+                        <label class="form-label" for="id">ID</label>
+                        <input type="text" id="id" class="form-control" name="_id" [(ngModel)]="_id" />
+                    </div>
+                </div>
+                <!-- Text input -->
+                <div class="col-6">
+                    <div class="form-outline">
+                        <label class="form-label" for="surname">Last name</label>
+                        <input type="text" id="surname" class="form-control" name="_surname" [(ngModel)]="_surname" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" (click)="searchContact()" class="btn btn-primary btn-block mb-4">Search
+                Contact</button>
+        </form>
+
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Phone 1</th>
+                <th>Phone 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td>{{ c.id }}</td>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.surname }}</td>
+                    <td>{{ c.email }}</td>
+                    <td>{{ c.phoneNumber1 }}</td>
+                    <td>{{ c.phoneNumber2 }}</td>
+            </tbody>
+        </table>
+    </div>
+</div>

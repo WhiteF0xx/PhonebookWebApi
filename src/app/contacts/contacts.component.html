@@ -1,0 +1,49 @@
+<div class="container m-5mx-auto" style="display: block;">
+    <div  class="container TransparentBox m-3 border border-primary rounded mx-auto" style="display: inline-block;">
+              <div class="row m-3 mx-auto" style="background-color: rgb(209, 206, 206);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <div class="col-sm-12">
+                <h1 class="text-center" style="color: red;font-weight: bolder;">List of Contacts</h1>
+              </div>
+            </div>
+
+            <div class="row m-4">
+                <div class="col-mid-12">
+                  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped border border-primary">
+                    <thead>
+                      <tr>
+                      <th>No.</th>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Surname</th>
+                      <th>Email</th>
+                      <th>Phone 1</th>
+                      <th>Phone 2</th>
+                      <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let contact of contactsArray; let i =index">
+                            <td>{{i+1}}</td>
+                            <td>{{contact.id}}</td>
+                            <td>{{contact.name }}</td>
+                            <td>{{contact.surname}}</td>
+                            <td>{{contact.email }}</td>
+                            <td>{{contact.phoneNumber1}}</td>
+                            <td>{{contact.phoneNumber2 }}</td>
+                             <td class="text-center align-middle">
+                              <div class="btn-group">
+                                &nbsp;
+                                <button class="btn btn-primary" (click)="onEditContact(contact)">Edit</button>
+                                &nbsp;
+                                <button class="btn btn-danger" (click)="onDeleteContact(contact)">Delete</button>
+                                &nbsp;
+                              </div>
+                            </td>
+                          </tr>
+                    </tbody>
+                  </table>
+            </div>
+            </div>
+    </div>
+  </div>
+  

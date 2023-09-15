@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 90%; }
+
+body {
+  font-family: 'Dancing Script', cursive;
+  justify-content: center;
+  /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+  font-size:larger;
+  margin-top: 5em;
+  margin-bottom: 4em;
+}
+
+footer{
+  background-color: moccasin;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: larger;
+}
+
+.container-fluid{
+  overflow: hidden;
+  }
+
+  .TransparentBox{
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
